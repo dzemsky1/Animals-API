@@ -52,6 +52,7 @@ router.get('/animals', requireToken, (req, res, next) => {
   const owner = req.user._id
   // console.log(req.user._id)
   Animal.find({owner: owner})
+    .populate('owner', 'email')
     .then(handle404)
     .then(animals => {
       // `examples` will be an array of Mongoose documents
