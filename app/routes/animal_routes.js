@@ -29,34 +29,15 @@ const router = express.Router()
 
 // INDEX
 // GET /examples
-router.get('/animals', requireToken, (req, res, next) => {
-  Animal.find()
-    .populate('owner')
-     // .then(animals => {
-    //   // `examples` will be an array of Mongoose documents
-    //   // we want to convert each one to a POJO, so we use `.map` to
-    //   // apply `.toObject` to each one
-     //   return animals.map(animal => animal.toObject())
-     // })
-    // respond with status 200 and JSON of the examples
-    // replace owner id with all information associated with that id
-
-    .then(animals => res.status(200).json({ animals: animals }))
-    // if an error occurs, pass it to the handler
-    .catch(next)
-})
-
-// INDEX BY OWNER
-// GET /examples
 // router.get('/animals', requireToken, (req, res, next) => {
-//   const owner = req.body.animal.owner.id
-//   Animal.find({owner: owner})
-//      // .then(animals => {
-//     //   // `examples` will be an array of Mongoose documents
-//     //   // we want to convert each one to a POJO, so we use `.map` to
-//     //   // apply `.toObject` to each one
-//      //   return animals.map(animal => animal.toObject())
-//      // })
+//   Animal.find()
+//     .populate('owner')
+//     .then(animals => {
+//       // `examples` will be an array of Mongoose documents
+//       // we want to convert each one to a POJO, so we use `.map` to
+//       // apply `.toObject` to each one
+//       return animals.map(animal => animal.toObject())
+//     })
 //     // respond with status 200 and JSON of the examples
 //     // replace owner id with all information associated with that id
 //
@@ -64,6 +45,27 @@ router.get('/animals', requireToken, (req, res, next) => {
 //     // if an error occurs, pass it to the handler
 //     .catch(next)
 // })
+
+// INDEX BY OWNER
+// GET /examples
+router.get('/animals', requireToken, (req, res, next) => {
+  const owner = req.user._id
+  // console.log(req.user._id)
+  Animal.find({owner: owner})
+    .then(handle404)
+    .then(animals => {
+      // `examples` will be an array of Mongoose documents
+      // we want to convert each one to a POJO, so we use `.map` to
+      // apply `.toObject` to each one
+      return animals.map(animal => animal.toObject())
+    })
+    // respond with status 200 and JSON of the examples
+    // replace owner id with all information associated with that id
+
+    .then(animals => res.status(200).json({ animals: animals }))
+    // if an error occurs, pass it to the handler
+    .catch(next)
+})
 
 // SHOW
 // GET /examples/5a7db6c74d55bc51bdf39793
