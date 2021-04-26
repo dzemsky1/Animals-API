@@ -1,4 +1,5 @@
 const mongoose = require('mongoose')
+const commentSchema = require('./comment')
 
 const animalSchema = new mongoose.Schema({
   name: {
@@ -13,7 +14,8 @@ const animalSchema = new mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: 'User',
     required: true
-  }
+  },
+  comments: [commentSchema]
 }, {
   timestamps: true
 })

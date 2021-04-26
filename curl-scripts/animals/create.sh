@@ -12,7 +12,8 @@ curl "${API}${URL_PATH}" \
     "animal": {
       "name": "'"${NAME}"'",
       "skill": "'"${SKILL}"'",
-      "owner": "'"${OWNER}"'"
+      "owner": "'"${OWNER}"'",
+      "comments": "'"${COMMENTS}"'"
     }
   }'
 

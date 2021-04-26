@@ -1,0 +1,235 @@
+@import '~bootstrap/scss/bootstrap';
+$clear: rgba(255,255,255,0.3);
+$text: rgba(255,255,255,0.8);
+$primary: linear-gradient(45deg, #fc6076, #ff9a44, #ef9d43, #e75516);
+
+
+body{
+  padding: 60px;
+  background-image: linear-gradient(45deg, #25aae1, #4481eb, #04befe, #3f86ed);
+  height: 110vh;
+  width: 100vw;
+  color: $text;
+  background-repeat: no-repeat;
+
+
+}
+
+h1{
+  font-size: 32px;
+  font-weight: 600px;
+}
+
+.toast-header{
+  background-color: $clear;
+}
+
+.toast-body{
+  color: black;
+  background-color: $clear;
+}
+
+#sign-up-div, #sign-in-div, #create-div, #update-div, #destroy-div{
+  position: absolute;
+  z-index: 9;
+}
+
+
+#sign-in-divheader, #sign-up-divheader, #create-divheader, #destroy-divheader, #update-divheader {
+  cursor: move;
+  z-index: 9;
+  padding-top: 20px;
+  margin-top: -30px;
+  margin-bottom: 12px;
+  background-color: $clear;
+  border-radius: 20px;
+}
+
+
+
+.form-control{
+  background-color: $clear;
+  background: transparent;
+   padding: 1em;
+   margin-bottom: 2em;
+   border: none;
+   border-left: 1px solid $clear;
+   border-top: 1px solid $clear;
+   border-radius: 5000px;
+   box-shadow: 4px 4px 60px rgba(0,0,0,0.2);
+   color: #ffffff;
+   font-family: Montserrat, sans-serif;
+   font-weight: 500;
+   transition: all 0.2s ease-in-out;
+   text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+   &::placeholder {
+               color: $text;
+               font-weight: 400px;
+   }
+}
+
+h1{
+  margin: auto;
+  margin-bottom: 48px;
+}
+
+p {
+    font-weight: 500;
+    color: #fff;
+    opacity: 0.7;
+    font-size: 1.4rem;
+    margin-top: 0;
+    margin-bottom: 60px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+  }
+.modal-title{
+  color: black;
+}
+
+.modal-content{
+  border-radius: 30px;
+  background-color: rgba(255,255,255,0.9);
+  padding-left: 16px;
+}
+
+
+
+#sign-up-form, #sign-in-form, #create-form, #update-form, #destroy-form{
+  margin:auto;
+  max-width: 20vw;
+  min-width: 400px;
+  padding: 3em;
+  border-left: 1px solid $clear;
+  border-top: 1px solid $clear;
+  box-shadow: 20px 20px 40px -6px rgba(0,0,0,0.2);
+  background-color: $clear;
+  border-radius: 30px;
+  margin-bottom: 24px;
+  margin-top: 60px;
+}
+
+#sign-up-form{
+  margin-left: 560px;
+}
+
+#create-form{
+  margin-left: 900px;
+}
+
+#update-form{
+  margin-left: 400px;
+}
+
+
+
+//
+// .btn-hover {
+//     width: 200px;
+//     font-size: 16px;
+//     font-weight: 600;
+//     color: #fff;
+//     cursor: pointer;
+//     margin: 20px;
+//     height: 55px;
+//     text-align:center;
+//     border: none;
+//     background-size: 300% 100%;
+//
+//     border-radius: 50px;
+//     moz-transition: all .4s ease-in-out;
+//     -o-transition: all .4s ease-in-out;
+//     -webkit-transition: all .4s ease-in-out;
+//     transition: all .4s ease-in-out;
+// }
+//
+// .btn-hover:hover {
+//     background-position: 100% 0;
+//     moz-transition: all .4s ease-in-out;
+//     -o-transition: all .4s ease-in-out;
+//     -webkit-transition: all .4s ease-in-out;
+//     transition: all .4s ease-in-out;
+// }
+//
+// .btn-hover:focus {
+//     outline: none;
+// }
+
+#sign-up, #sign-in, #create-button, #update-button, #destroy-button, #change-password-confirm{
+  // max-width: 10vw;
+  min-width: 300px;
+  margin-top: 2rem;
+  background-size: 200% 100%;
+  box-shadow: 0 4px 15px 0 rgba(252, 104, 110, 0.75);
+  border: none;
+  border-radius: 32px;
+}
+
+#change-password-confirm{
+  margin-bottom: 24px;
+  width: 450px;
+}
+
+#animal-list, #all-animal-list{
+  color: black;
+  font-size: 16px;
+}
+
+
+.btn-primary{
+  background-image: $primary;
+  background-size: 200% 100%;
+  box-shadow: 0 4px 15px 0 rgba(252, 104, 110, 0.75);
+  border: none;
+  border-radius: 32px;
+  &:hover {
+      background-position: 100% 0;
+      -o-transition: all .4s ease-in-out;
+      -webkit-transition: all .4s ease-in-out;
+      transition: all .4s ease-in-out;
+  }
+}
+
+.btn-secondary{
+  background-color: $clear;
+  background-size: 200% 100%;
+  box-shadow: 20px 20px 40px -6px rgba(0,0,0,0.2);
+  border: none;
+  border-radius: 32px;
+  border-left: 1px solid $clear;
+  border-top: 1px solid $clear;
+}
+
+#live-toast{
+  background-color: $clear;
+  color: black;
+}
+
+#destroy-button{
+  margin-top: 172px;
+}
+
+#create-button{
+  margin-top: 100px;
+}
+
+#sign-in{
+  margin-top: 96px;
+}
+
+#sign-out{
+  margin-right: 24px;
+}
+
+#oldpassword, #newpassword{
+  &::placeholder{
+    color: rgba(0,0,0,0.7);
+    text-shadow: none;
+  }
+  margin-top: 24px;
+}
+
+#change-password-button, #view-button, #sign-out-button{
+  margin-left: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}

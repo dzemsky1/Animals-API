@@ -88,6 +88,7 @@ router.post('/animals', requireToken, (req, res, next) => {
   const animalData = req.body.animal
   console.log(req.body)
   animalData.owner = req.user.id
+  animalData.comments = []
 
   Animal.create(animalData)
     // respond to succesful `create` with status 201 and JSON of new "example"
