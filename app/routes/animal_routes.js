@@ -31,7 +31,7 @@ const router = express.Router()
 // GET /examples
 router.get('/allanimals', requireToken, (req, res, next) => {
   Animal.find()
-    .populate('owner')
+    .populate('owner', 'email')
     .then(animals => {
       // `examples` will be an array of Mongoose documents
       // we want to convert each one to a POJO, so we use `.map` to

@@ -20,6 +20,10 @@ As a user I want to Delete an animal I own
 ### Wireframes
 https://imgur.com/a/z3Ek8rn
 
+### ERD
+https://imgur.com/a/Mbdkbob
+
+
 ## Tasks
 
 Instead of `grunt`, this template uses `npm` as a task runner. This is more
@@ -32,14 +36,7 @@ use `npm` anyway. These are the commands available:
 | `npm test`             | Runs automated tests.                                                                                       |
 | `npm run debug-server` | Starts the server in debug mode, which will print lots of extra info about what's happening inside the app. |
 
-## API
 
-Use this as the basis for your own API documentation. Add a new third-level
-heading for your custom entities, and follow the pattern provided for the
-built-in user authentication documentation.
-
-Scripts are included in [`curl-scripts`](curl-scripts) to test built-in actions.
-Add your own scripts to test your custom API.
 
 ### Authentication
 
